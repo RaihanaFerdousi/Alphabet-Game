@@ -31,8 +31,7 @@ export const CharacterSprite: React.FC<CharacterSpriteProps> = ({
 
   const handlePlayAudio = () => {
     const msg = new SpeechSynthesisUtterance(
-      `Hi, I am a ${character.name}. Guess the first letter of my name. 
-        The letter pronunciation is ${character.letter}.`
+      `Hi, I am a ${character.name}. Guess the first letter of my name`
     );
     msg.lang = "en-US";
     msg.onend = () => {
