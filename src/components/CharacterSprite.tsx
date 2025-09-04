@@ -101,10 +101,6 @@ export const CharacterSprite: React.FC<CharacterSpriteProps> = ({
       )}
 
       <div className={`relative ${getCharacterStyle()}`}>
-        {/*
-          New wrapper div to enforce the size.
-          The img tag now fills this div.
-        */}
         <div className="relative w-56 h-56 rounded-3xl bg-white/50 backdrop-blur-sm p-4">
           <img
             src={imageSrc}

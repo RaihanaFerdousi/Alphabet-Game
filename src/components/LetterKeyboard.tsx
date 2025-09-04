@@ -59,7 +59,6 @@ export const LetterKeyboard: React.FC<LetterKeyboardProps> = ({
                 alt={`Letter ${letterData.letter}`}
                 className="w-full h-full object-contain"
                 onError={(e) => {
-                  // Fallback to text if image fails to load
                   e.currentTarget.style.display = 'none';
                   const textElement = e.currentTarget.nextElementSibling as HTMLElement;
                   if (textElement) {

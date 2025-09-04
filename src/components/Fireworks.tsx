@@ -27,9 +27,8 @@ export const Fireworks: React.FC<FireworksProps> = ({ isActive, onComplete }) =>
     const colors = ['#f43f5e', '#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b', '#ec4899'];
     const newParticles: Particle[] = [];
 
-    // Create multiple firework bursts
     for (let burst = 0; burst < 4; burst++) {
-      const centerX = 20 + Math.random() * 60; // Random position across screen
+      const centerX = 20 + Math.random() * 60;
       const centerY = 20 + Math.random() * 40;
 
       for (let i = 0; i < 12; i++) {
@@ -50,14 +49,13 @@ export const Fireworks: React.FC<FireworksProps> = ({ isActive, onComplete }) =>
 
     setParticles(newParticles);
 
-    // Animate particles
     const animationInterval = setInterval(() => {
       setParticles(prevParticles => {
         const updatedParticles = prevParticles.map(particle => ({
           ...particle,
           x: particle.x + particle.vx,
           y: particle.y + particle.vy,
-          vy: particle.vy + 0.1, // Gravity
+          vy: particle.vy + 0.1,
           life: particle.life - 0.015
         })).filter(particle => particle.life > 0);
 
@@ -93,7 +91,7 @@ export const Fireworks: React.FC<FireworksProps> = ({ isActive, onComplete }) =>
         />
       ))}
       
-      {/* Enhanced sparkle effects */}
+
       <div className="absolute inset-0">
         {[...Array(25)].map((_, i) => (
           <div
