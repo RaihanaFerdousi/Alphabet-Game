@@ -66,6 +66,7 @@ export const LetterKeyboard: React.FC<LetterKeyboardProps> = ({
                   }
                 }}
               />
+              
               <span 
                 className="text-2xl font-bold text-slate-700 hidden"
                 style={{ display: 'none' }}
